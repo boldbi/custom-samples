@@ -30,44 +30,44 @@ namespace Bold.API.Samples
 
             #region Create Tenant
 
-            //var createTenant = new CreateTenantRequest
-            //{
-            //    Email = username,
-            //    ServerConfiguration = new ServerConfiguration
-            //    {
-            //        Site = new Site
-            //        {
-            //            TenantIdentifier = siteIdentifier,
-            //            TenantName = "API Testing",
-            //            TenantType = (int)TenantType.BoldBI
-            //        },
-            //        Database = new Data // Parameters will differ based on Sql Server Type. Please refer the API document - https://help.boldbi.com/embedded-bi/rest-api-reference/site-administration/v2.0/api-reference/#tag/Tenants/operation/create_tenant
-            //        {
-            //            DatabaseName = "apitest1",
-            //            ServerName = "localhost",
-            //            UserName = "sa",
-            //            Password = "sa@1234",
-            //            ServerType = (int)SqlServerType.MSSQL,
-            //            IsNewDatabase = true,
-            //            SslEnabled = false
-            //        },
-            //        Storage = new Storage
-            //        {
-            //            StorageType = (int)StorageType.FileStorage
-            //        }
-            //    },
-            //    DataStoreConfiguration = new Data // Parameters will differ based on Sql Server Type. Please refer the API document - https://help.boldbi.com/embedded-bi/rest-api-reference/site-administration/v2.0/api-reference/#tag/Tenants/operation/create_tenant
-            //    {
-            //        DatabaseName = "apitest1imdb",
-            //        ServerName = "localhost",
-            //        UserName = "sa",
-            //        Password = "sa@1234",
-            //        ServerType = (int)SqlServerType.MSSQL,
-            //        IsNewDatabase = true,
-            //    },
-            //};
+            var createTenant = new CreateTenantRequest
+            {
+                Email = username,
+                ServerConfiguration = new ServerConfiguration
+                {
+                    Site = new Site
+                    {
+                        TenantIdentifier = siteIdentifier,
+                        TenantName = "API Testing",
+                        TenantType = (int)TenantType.BoldBI
+                    },
+                    Database = new Data // Parameters will differ based on Sql Server Type. Please refer the API document - https://help.boldbi.com/embedded-bi/rest-api-reference/site-administration/v2.0/api-reference/#tag/Tenants/operation/create_tenant
+                    {
+                        DatabaseName = "apitest1",
+                        ServerName = "localhost",
+                        UserName = "sa",
+                        Password = "sa@1234",
+                        ServerType = (int)SqlServerType.MSSQL,
+                        IsNewDatabase = true,
+                        SslEnabled = false
+                    },
+                    Storage = new Storage
+                    {
+                        StorageType = (int)StorageType.FileStorage
+                    }
+                },
+                DataStoreConfiguration = new Data // Parameters will differ based on Sql Server Type. Please refer the API document - https://help.boldbi.com/embedded-bi/rest-api-reference/site-administration/v2.0/api-reference/#tag/Tenants/operation/create_tenant
+                {
+                    DatabaseName = "apitest1imdb",
+                    ServerName = "localhost",
+                    UserName = "sa",
+                    Password = "sa@1234",
+                    ServerType = (int)SqlServerType.MSSQL,
+                    IsNewDatabase = true,
+                },
+            };
 
-            //var createTenantResponse = tenantManagement.CreateTenantAsync(createTenant).Result;
+            var createTenantResponse = tenantManagement.CreateTenantAsync(createTenant).Result;
 
             #endregion
 
