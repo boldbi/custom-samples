@@ -28,11 +28,22 @@ namespace Bold.API.Samples
         {
             var tenantManagement = new TenantManagementModel(dns, clientId, clientSecret);
 
+            var newUmsUser = new CreateUserRequest
+            {
+                Username = "testuser",
+                Email = "testuser@boldbi.localhost",
+                FirstName = "Test",
+                Lastname = "User",
+                Password = password,
+            };
+
+            var newUserResponse = tenantManagement.CreateUserAsync(newUmsUser).Result;
+
             #region Create Tenant
 
             var createTenant = new CreateTenantRequest
             {
-                Email = username,
+                Email = newUserResponse.UserInfo.Email,
                 ServerConfiguration = new ServerConfiguration
                 {
                     Site = new Site

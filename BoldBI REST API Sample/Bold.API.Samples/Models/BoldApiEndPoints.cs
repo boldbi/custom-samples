@@ -10,6 +10,8 @@ namespace Bold.API.Samples.Models
 
         public static string CreateTenant => "/api/v2.0/tenants";
 
+        public static string AddUser => "/api/v2.0/user/add";
+
         public static string BoldBITokenEndPoint(string siteIdentifier) => $"/bi/api/site/{siteIdentifier}/token";
 
         public static string BoldBICreateUser(string siteIdentifier) => $"/bi/api/site/{siteIdentifier}/v4.0/users";
