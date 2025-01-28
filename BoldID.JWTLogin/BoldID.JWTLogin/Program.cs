@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-var signingKey = "abcdefghijklmnopqrstuvwxyz";// Use the signing key value from JWT Settings page.
+var signingKey = "abcdefghijklmnopqrstuvwxyz1234567890";// Use the signing key value from JWT Settings page.
 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(signingKey));
 var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature, SecurityAlgorithms.Sha256Digest);
 
